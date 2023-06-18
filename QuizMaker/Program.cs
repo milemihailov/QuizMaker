@@ -3,23 +3,48 @@
     internal class Program
     {
         public const int MAX_NUM_OF_ANSWERS = 3;
+        public const int MAX_QUESTIONS = 4;
 
         static void Main(string[] args)
         {
-            QuizDatabase Quiz = new QuizDatabase();
+            List<Question> QuizDatabase = new List<Question>();
 
-            UiMethods.ShowInputMessage(UiMethods.Options.Question);
-            Quiz.Question = (UiMethods.AskForInput());
 
-            for (int i = 0; i < MAX_NUM_OF_ANSWERS; i++)
+
+            int count = 0;
+            while (count < MAX_QUESTIONS)
             {
-                UiMethods.ShowInputMessage(UiMethods.Options.OptionalAnswer);
-                Quiz.Answers.Add(UiMethods.AskForInput());
+                Question Quiz = new Question();
+
+                UiMethods.ShowInputMessage(UiMethods.Options.Question);
+                Quiz.Questions = UiMethods.AskForInput();
+                UiMethods.ClearDisplay();
+
+                for (int i = 0; i < MAX_NUM_OF_ANSWERS; i++)
+                {
+                    UiMethods.ShowInputMessage(UiMethods.Options.OptionalAnswer);
+                    Quiz.Answers.Add(UiMethods.AskForInput());
+                }
+
+                UiMethods.ShowInputMessage(UiMethods.Options.RightAnswer);
+                Quiz.RightAnswer = UiMethods.AskForInput();
+                UiMethods.ClearDisplay();
+
+                count++;
+                QuizDatabase.Add(Quiz);
+
             }
 
-            UiMethods.ShowInputMessage(UiMethods.Options.RightAnswer);
-            Quiz.RightAnswer = UiMethods.AskForInput();
+            //foreach (Question Quiz in QuizDatabase)
+            //{
+            //    Console.Write($"{Quiz.Questions} | ");
+            //    Console.Write(Quiz.AnswersString());
+            //    Console.Write($"{Quiz.RightAnswer} \n");
+            //}
 
         }
     }
+
 }
+
+

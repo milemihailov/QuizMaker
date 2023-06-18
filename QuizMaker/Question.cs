@@ -1,9 +1,9 @@
 ﻿namespace QuizMaker
 {
-    internal class QuizDatabase
+    internal class Question
     {
         public List<string> Answers = new List<string>();
-        public string Question { get; set; }
+        public string Questions { get; set; }
         public string RightAnswer { get; set; }
 
         public string AnswersString()

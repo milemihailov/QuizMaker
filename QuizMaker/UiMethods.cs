@@ -30,9 +30,14 @@
             return Console.ReadLine().ToString();
         }
 
-        public void ShowQuizData(QuizDatabase quiz)
+        public void ShowQuizData(Question quiz)
         {
-            Console.WriteLine($"{quiz.Question} | {quiz.AnswersString()}{quiz.RightAnswer}");
+            Console.WriteLine($"{quiz.Questions} | {quiz.AnswersString()}{quiz.RightAnswer}");
+        }
+
+        public static void ClearDisplay()
+        {
+            Console.Clear();
         }
     }
 }
