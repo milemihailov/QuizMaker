@@ -2,6 +2,7 @@
 {
     internal class UiMethods
     {
+
         public enum Options
         {
             Question,
@@ -29,5 +30,9 @@
             return Console.ReadLine().ToString();
         }
 
+        public void ShowQuizData(QuizDatabase quiz)
+        {
+            Console.WriteLine($"{quiz.Question} | {quiz.AnswersString()}{quiz.RightAnswer}");
+        }
     }
 }

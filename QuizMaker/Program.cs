@@ -9,7 +9,7 @@
             QuizDatabase Quiz = new QuizDatabase();
 
             UiMethods.ShowInputMessage(UiMethods.Options.Question);
-            Quiz.Question.Add(UiMethods.AskForInput());
+            Quiz.Question = (UiMethods.AskForInput());
 
             for (int i = 0; i < MAX_NUM_OF_ANSWERS; i++)
             {

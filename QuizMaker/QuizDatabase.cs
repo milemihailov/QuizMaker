@@ -3,8 +3,18 @@
     internal class QuizDatabase
     {
         public List<string> Answers = new List<string>();
-        public List<string> Question = new List<string>();
-
+        public string Question { get; set; }
         public string RightAnswer { get; set; }
+
+        public string AnswersString()
+        {
+            string answers = "";
+            foreach (string word in Answers)
+            {
+                answers += word + " | ";
+            }
+            return answers;
+        }
+
     }
 }
