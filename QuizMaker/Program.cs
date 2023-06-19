@@ -10,33 +10,11 @@
         static void Main(string[] args)
         {
 
-            List<Question> QuizDatabase = new List<Question>();
+            List<Question> Quiz = new List<Question>();
 
-            int count = 0;
-            while (count < MAX_QUESTIONS)
-            {
-                Question Quiz = new Question();
+            QuizDatabase.GetData(Quiz);
 
-                UiMethods.ShowInputMessage(UiMethods.ShowMessages.ShowEnterQuestionMessage);
-                Quiz.Questions = UiMethods.AskForStringInput();
-                UiMethods.ClearDisplay();
-
-                for (int i = 0; i < MAX_NUM_OF_ANSWERS; i++)
-                {
-                    UiMethods.ShowInputMessage(UiMethods.ShowMessages.ShowOptionalAnswerMessage);
-                    Quiz.Answers.Add(UiMethods.AskForStringInput());
-                }
-
-                UiMethods.ShowInputMessage(UiMethods.ShowMessages.ShowRightAnswerMessage);
-                Quiz.RightAnswer = UiMethods.AskForStringInput();
-                UiMethods.ClearDisplay();
-
-                count++;
-                QuizDatabase.Add(Quiz);
-
-            }
-
-            GamePlay.Game(QuizDatabase);
+            GamePlay.PlayGame(Quiz);
 
         }
     }

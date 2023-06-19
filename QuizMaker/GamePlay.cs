@@ -2,7 +2,7 @@
 {
     internal class GamePlay
     {
-        public static void Game(List<Question> Quiz)
+        public static void PlayGame(List<Question> Quiz)
         {
 
             bool play = true;
