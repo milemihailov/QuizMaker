@@ -56,7 +56,7 @@
         }
 
 
-        public static void ShowQuizData(Question quiz)
+        public static void ShowQuizData(QuizDatabase quiz)
         {
             Console.WriteLine($"{quiz.Questions} | {quiz.AnswersString()}{quiz.RightAnswer}");
         }
@@ -68,7 +68,7 @@
         }
 
 
-        public static void ShowResultsMessage(ShowResults options, int randomNum, List<Question> Quiz, string ranswer)
+        public static void ShowResultsMessage(ShowResults options, int randomNum, List<QuizDatabase> Quiz, string ranswer)
         {
             switch (options)
             {

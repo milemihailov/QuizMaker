@@ -10,15 +10,14 @@
         static void Main(string[] args)
         {
 
-            List<Question> Quiz = new List<Question>();
+            List<QuizDatabase> Quiz = new List<QuizDatabase>();
 
-            QuizDatabase.GetData(Quiz);
+            Logic.GetData(Quiz);
 
-            GamePlay.PlayGame(Quiz);
+            Logic.PlayGame(Quiz);
 
         }
     }
-
 }
 
 
