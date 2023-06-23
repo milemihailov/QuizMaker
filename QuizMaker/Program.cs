@@ -14,7 +14,9 @@
 
             Logic.GetData(Quiz);
 
-            Logic.PlayGame(Quiz);
+            int correctAnswers = Logic.PlayGame(Quiz);
+
+            Console.WriteLine($"You had {correctAnswers} correct answers.");
 
         }
     }

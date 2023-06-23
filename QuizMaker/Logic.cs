@@ -27,10 +27,11 @@
                 QuizDatabase.Add(Quiz);
             }
         }
-        public static void PlayGame(List<QuizDatabase> Quiz)
+        public static int PlayGame(List<QuizDatabase> Quiz)
         {
 
             bool play = true;
+            int points = 0;
 
             while (play)
             {
@@ -46,6 +47,7 @@
                 if (ranswer == Quiz[randomNum].RightAnswer)
                 {
                     UiMethods.ShowResultsMessage(UiMethods.ShowResults.ShowCorrectAnswer, randomNum, Quiz, ranswer);
+                    points++;
                 }
                 else
                 {
@@ -65,6 +67,7 @@
                     play = false;
                 }
             }
+            return points;
         }
     }
 }
