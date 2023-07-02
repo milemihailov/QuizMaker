@@ -2,8 +2,9 @@
 {
     internal class Logic
     {
-        public static void GetData(List<Question> quizDatabase)
+        public static List<Question> GetData()
         {
+            List<Question> quizDatabase = new List<Question>();
             int count = 0;
             while (count < Program.MAX_QUESTIONS)
             {
@@ -26,6 +27,7 @@
                 count++;
                 quizDatabase.Add(quiz);
             }
+            return quizDatabase;
         }
         public static int PlayGame(List<Question> quiz)
         {

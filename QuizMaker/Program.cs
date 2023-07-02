@@ -12,7 +12,7 @@
 
             List<Question> quiz = new List<Question>();
 
-            Logic.GetData(quiz);
+            quiz = Logic.GetData();
 
             int correctAnswers = Logic.PlayGame(quiz);
 
