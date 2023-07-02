@@ -10,11 +10,11 @@
         static void Main(string[] args)
         {
 
-            List<Question> Quiz = new List<Question>();
+            List<Question> quiz = new List<Question>();
 
-            Logic.GetData(Quiz);
+            Logic.GetData(quiz);
 
-            int correctAnswers = Logic.PlayGame(Quiz);
+            int correctAnswers = Logic.PlayGame(quiz);
 
             UiMethods.ShowCorrectAnswers(correctAnswers);
 

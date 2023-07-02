@@ -72,12 +72,12 @@
         }
 
 
-        public static void ShowResultsMessage(ShowResults options, int randomNum, List<Question> Quiz, string ranswer)
+        public static void ShowResultsMessage(ShowResults options, int randomNum, List<Question> quiz, string ranswer)
         {
             switch (options)
             {
                 case ShowResults.ShowQuestion:
-                    Console.Write($"{Quiz[randomNum].Questions} | ");
+                    Console.Write($"{quiz[randomNum].Questions} | ");
                     break;
                 case ShowResults.ShowCorrectAnswer:
                     Console.WriteLine("You got it right!");
