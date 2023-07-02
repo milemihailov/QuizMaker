@@ -36,6 +36,10 @@
             }
         }
 
+        public static void ShowCorrectAnswers(int correctAnswers)
+        {
+            Console.WriteLine($"You had {correctAnswers} correct answers.");
+        }
 
         public static string AskForStringInput()
         {
@@ -56,7 +60,7 @@
         }
 
 
-        public static void ShowQuizData(QuizDatabase quiz)
+        public static void ShowQuizData(Question quiz)
         {
             Console.WriteLine($"{quiz.Questions} | {quiz.AnswersString()}{quiz.RightAnswer}");
         }
@@ -68,7 +72,7 @@
         }
 
 
-        public static void ShowResultsMessage(ShowResults options, int randomNum, List<QuizDatabase> Quiz, string ranswer)
+        public static void ShowResultsMessage(ShowResults options, int randomNum, List<Question> Quiz, string ranswer)
         {
             switch (options)
             {

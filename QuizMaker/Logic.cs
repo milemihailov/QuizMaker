@@ -2,12 +2,12 @@
 {
     internal class Logic
     {
-        public static void GetData(List<QuizDatabase> QuizDatabase)
+        public static void GetData(List<Question> QuizDatabase)
         {
             int count = 0;
             while (count < Program.MAX_QUESTIONS)
             {
-                QuizDatabase Quiz = new QuizDatabase();
+                Question Quiz = new Question();
 
                 UiMethods.ShowInputMessage(UiMethods.ShowMessages.ShowEnterQuestionMessage);
                 Quiz.Questions = UiMethods.AskForStringInput();
@@ -27,7 +27,7 @@
                 QuizDatabase.Add(Quiz);
             }
         }
-        public static int PlayGame(List<QuizDatabase> Quiz)
+        public static int PlayGame(List<Question> Quiz)
         {
 
             bool play = true;

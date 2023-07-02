@@ -10,13 +10,13 @@
         static void Main(string[] args)
         {
 
-            List<QuizDatabase> Quiz = new List<QuizDatabase>();
+            List<Question> Quiz = new List<Question>();
 
             Logic.GetData(Quiz);
 
             int correctAnswers = Logic.PlayGame(Quiz);
 
-            Console.WriteLine($"You had {correctAnswers} correct answers.");
+            UiMethods.ShowCorrectAnswers(correctAnswers);
 
         }
     }
