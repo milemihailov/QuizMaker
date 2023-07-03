@@ -60,14 +60,7 @@
 
                 char playAgain = UiMethods.AskForCharInput();
 
-                if (playAgain == 'y')
-                {
-                    play = true;
-                }
-                else
-                {
-                    play = false;
-                }
+                play = playAgain == 'y';
             }
             return points;
         }
