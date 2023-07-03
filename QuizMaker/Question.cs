@@ -1,9 +1,10 @@
 ﻿namespace QuizMaker
 {
-    internal class Question
+    public class Question
     {
-        public List<string> Answers = new List<string>();
         public string Questions { get; set; }
+
+        public List<string> Answers = new List<string>();
         public string RightAnswer { get; set; }
 
         public string AnswersString()
@@ -15,6 +16,5 @@
             }
             return answers;
         }
-
     }
 }

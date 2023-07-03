@@ -9,10 +9,11 @@
         public static readonly Random rng = new Random();
         static void Main(string[] args)
         {
-
             List<Question> quiz = new List<Question>();
 
             quiz = Logic.GetData();
+
+            ListToXmlFile.SerializeListToXmlFile(quiz);
 
             int correctAnswers = Logic.PlayGame(quiz);
 

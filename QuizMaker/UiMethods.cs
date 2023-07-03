@@ -38,6 +38,7 @@
 
         public static void ShowCorrectAnswers(int correctAnswers)
         {
+            Console.Clear();
             Console.WriteLine($"You had {correctAnswers} correct answers.");
         }
 
