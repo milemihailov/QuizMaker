@@ -13,7 +13,10 @@
 
             quiz = Logic.GetData();
 
-            ListToXmlFile.SerializeXmlFileToList(quiz);
+            if (ListToXmlFile.IsXmlFileMissing())
+            {
+                ListToXmlFile.SerializeXmlFileToList(quiz);
+            }
 
             ListToXmlFile.SerializeListToXmlFile(quiz);
 

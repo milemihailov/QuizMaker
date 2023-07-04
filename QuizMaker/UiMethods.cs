@@ -63,7 +63,7 @@
 
         public static void ShowQuizData(Question quiz)
         {
-            Console.WriteLine($"{quiz.Questions} | {quiz.AnswersString()}{quiz.RightAnswer}");
+            Console.WriteLine($"{quiz.Questions} | {quiz.AnswersString()}");
         }
 
 

@@ -25,5 +25,9 @@ namespace QuizMaker
                 result.AddRange(list);
             }
         }
+        public static bool IsXmlFileMissing()
+        {
+            return File.Exists(path);
+        }
     }
 }
