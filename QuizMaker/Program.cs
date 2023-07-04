@@ -13,6 +13,8 @@
 
             quiz = Logic.GetData();
 
+            ListToXmlFile.SerializeXmlFileToList(quiz);
+
             ListToXmlFile.SerializeListToXmlFile(quiz);
 
             int correctAnswers = Logic.PlayGame(quiz);
