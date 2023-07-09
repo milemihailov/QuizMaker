@@ -19,21 +19,17 @@
             ShowRightAnswerMessage
         }
 
+        public static readonly Dictionary<ShowMessages, string> messageTexts = new Dictionary<ShowMessages, string>()
+        {
+            { ShowMessages.ShowEnterQuestionMessage,"Enter your question:" },
+            { ShowMessages.ShowOptionalAnswerMessage, "Enter your answers:" },
+            { ShowMessages.ShowRightAnswerMessage, "Enter the right answer:" }
+
+        };
 
         public static void ShowInputMessage(ShowMessages options)
         {
-            switch (options)
-            {
-                case ShowMessages.ShowEnterQuestionMessage:
-                    Console.WriteLine("Enter your question:");
-                    break;
-                case ShowMessages.ShowOptionalAnswerMessage:
-                    Console.WriteLine("Enter your answers:");
-                    break;
-                case ShowMessages.ShowRightAnswerMessage:
-                    Console.WriteLine("Enter the right answer:");
-                    break;
-            }
+            Console.WriteLine(messageTexts[options]);
         }
 
         public static void ShowCorrectAnswers(int correctAnswers)
@@ -72,25 +68,26 @@
             Console.Clear();
         }
 
-
-        public static void ShowResultsMessage(ShowResults options, int randomNum, List<Question> quiz, string ranswer)
+        public static void ShowQuestion(List<Question> quiz, int randomNum)
         {
-            switch (options)
-            {
-                case ShowResults.ShowQuestion:
-                    Console.Write($"{quiz[randomNum].Questions} | ");
-                    break;
-                case ShowResults.ShowCorrectAnswer:
-                    Console.WriteLine("You got it right!");
-                    Console.Write($"The right answer was: {ranswer} \n");
-                    break;
-                case ShowResults.ShowWrongAnswer:
-                    Console.WriteLine("Wrong Answer!");
-                    break;
-                case ShowResults.ShowPlayMore:
-                    Console.WriteLine("Play more? y/n");
-                    break;
-            }
+            Console.Write($"{quiz[randomNum].Questions} | ");
+        }
+
+        public static void ShowCorrectAnswer(string ranswer)
+        {
+            Console.WriteLine("You got it right!");
+            Console.Write($"The right answer was: {ranswer} \n");
+        }
+
+        public static readonly Dictionary<ShowResults, string> resultsTexts = new Dictionary<ShowResults, string>()
+        {
+            { ShowResults.ShowWrongAnswer, "Wrong Answer!" },
+            { ShowResults.ShowPlayMore, "Play more? y/n" }
+        };
+
+        public static void ShowResultsMessage(ShowResults options)
+        {
+            Console.WriteLine(resultsTexts[options]);
         }
     }
 }

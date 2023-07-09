@@ -48,15 +48,15 @@
 
                 if (ranswer == quiz[randomNum].RightAnswer)
                 {
-                    UiMethods.ShowResultsMessage(UiMethods.ShowResults.ShowCorrectAnswer, randomNum, quiz, ranswer);
+                    UiMethods.ShowCorrectAnswer(ranswer);
                     points++;
                 }
                 else
                 {
-                    UiMethods.ShowResultsMessage(UiMethods.ShowResults.ShowWrongAnswer, randomNum, quiz, ranswer);
+                    UiMethods.ShowResultsMessage(UiMethods.ShowResults.ShowWrongAnswer);
                 }
 
-                UiMethods.ShowResultsMessage(UiMethods.ShowResults.ShowPlayMore, randomNum, quiz, ranswer);
+                UiMethods.ShowResultsMessage(UiMethods.ShowResults.ShowPlayMore);
 
                 char playAgain = UiMethods.AskForCharInput();
 
