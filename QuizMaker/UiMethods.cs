@@ -27,6 +27,12 @@
 
         };
 
+        public static readonly Dictionary<ShowResults, string> resultsTexts = new Dictionary<ShowResults, string>()
+        {
+            { ShowResults.ShowWrongAnswer, "Wrong Answer!" },
+            { ShowResults.ShowPlayMore, "Play more? y/n" }
+        };
+
         public static void ShowInputMessage(ShowMessages options)
         {
             Console.WriteLine(messageTexts[options]);
@@ -78,12 +84,6 @@
             Console.WriteLine("You got it right!");
             Console.Write($"The right answer was: {ranswer} \n");
         }
-
-        public static readonly Dictionary<ShowResults, string> resultsTexts = new Dictionary<ShowResults, string>()
-        {
-            { ShowResults.ShowWrongAnswer, "Wrong Answer!" },
-            { ShowResults.ShowPlayMore, "Play more? y/n" }
-        };
 
         public static void ShowResultsMessage(ShowResults options)
         {
