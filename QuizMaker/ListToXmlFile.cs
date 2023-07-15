@@ -4,7 +4,7 @@ namespace QuizMaker
 {
     internal class ListToXmlFile
     {
-        public static string path = @"D:\serialize\QuizData.xml";
+        public static string path = @"QuizData.xml";
 
 
         public static void SerializeListToXmlFile(List<Question> quiz)
