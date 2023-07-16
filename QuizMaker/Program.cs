@@ -13,12 +13,12 @@
 
             quiz = Logic.GetData();
 
-            if (ListToXmlFile.IsXmlFileMissing())
+            if (FileReadWrite.IsXmlFileMissing())
             {
-                ListToXmlFile.SerializeXmlFileToList(quiz);
+                FileReadWrite.SerializeXmlFileToList(quiz);
             }
 
-            ListToXmlFile.SerializeListToXmlFile(quiz);
+            FileReadWrite.SerializeListToXmlFile(quiz);
 
             int correctAnswers = Logic.PlayGame(quiz);
 

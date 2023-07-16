@@ -2,7 +2,7 @@
 
 namespace QuizMaker
 {
-    internal class ListToXmlFile
+    internal class FileReadWrite
     {
         public static string path = @"QuizData.xml";
 
