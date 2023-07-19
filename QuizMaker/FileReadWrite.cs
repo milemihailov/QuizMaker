@@ -12,6 +12,7 @@ namespace QuizMaker
         /// <param name="quiz"></param>
         public static void SerializeListToXmlFile(List<Question> quiz)
         {
+
             XmlSerializer writer = new XmlSerializer(typeof(List<Question>));
             using (FileStream file = File.Create(path))
             {
@@ -25,8 +26,10 @@ namespace QuizMaker
         /// </summary>
         /// <param name="result"></param>
         /// <returns></returns>
-        public static List<Question> SerializeXmlFileToList(List<Question> result)
+        public static List<Question> SerializeXmlFileToList()
         {
+            List<Question> result = new List<Question>();
+
             using (FileStream file = File.OpenRead(path))
             {
                 XmlSerializer writer = new XmlSerializer(typeof(List<Question>));

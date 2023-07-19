@@ -20,7 +20,7 @@
 
             if (FileReadWrite.IsXmlFileMissing())
             {
-                FileReadWrite.SerializeXmlFileToList(quiz);
+                quiz = FileReadWrite.SerializeXmlFileToList();
             }
 
             FileReadWrite.SerializeListToXmlFile(quiz);
@@ -28,7 +28,6 @@
             int correctAnswers = Logic.PlayGame(quiz);
 
             UiMethods.ShowCorrectAnswers(correctAnswers);
-
         }
     }
 }
