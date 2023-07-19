@@ -84,7 +84,7 @@
         /// Asks the user for integer between 1 and 2
         /// </summary>
         /// <returns></returns>
-        public static int AskForIntInputBetween1and2()
+        public static int AskForQuizerModeInput()
         {
             bool waitForNum = false;
             int num = 0;

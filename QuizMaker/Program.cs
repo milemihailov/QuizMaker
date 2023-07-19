@@ -10,11 +10,10 @@
         static void Main(string[] args)
         {
             UiMethods.ShowPlayOrEnterDataQuestion();
-            UiMethods.AskForIntInputBetween1and2();
 
             List<Question> quiz = new List<Question>();
 
-            if (UiMethods.AskForIntInputBetween1and2() == 1)
+            if (UiMethods.AskForQuizerModeInput() == 1)
             {
                 quiz = Logic.GetData();
             }
