@@ -98,9 +98,9 @@
                 {
                     Console.WriteLine("You need to enter a number.");
                 }
-                if (num > Program.CHOICES || num < 1)
+                if (num > Program.QUIZER_MODE_PLAY_GAME || num < Program.QUIZER_MODE_DATA_ENTERING)
                 {
-                    Console.WriteLine("Enter number between 1 and 2");
+                    Console.WriteLine($"Enter number between {Program.QUIZER_MODE_DATA_ENTERING} and {Program.QUIZER_MODE_PLAY_GAME}");
                     waitForNum = false;
                 }
             }
@@ -166,7 +166,7 @@
         public static void ShowPlayOrEnterDataQuestion()
         {
             Console.WriteLine("Would you like to play or enter your questions?");
-            Console.WriteLine("1.Enter questions\n2.Play");
+            Console.WriteLine($"{Program.QUIZER_MODE_DATA_ENTERING}.Enter questions\n{Program.QUIZER_MODE_PLAY_GAME}.Play");
         }
     }
 }
