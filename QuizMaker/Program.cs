@@ -13,7 +13,7 @@
 
             List<Question> quiz = new List<Question>();
 
-            if (UiMethods.AskForQuizerModeInput() == 1)
+            if (UiMethods.AskForQuizerModeInput() == QUIZER_MODE_DATA_ENTERING)
             {
                 quiz = Logic.GetData();
             }
