@@ -2,11 +2,20 @@
 {
     internal class Logic
     {
+
+        /// <summary>
+        /// It's getting data from the user
+        /// </summary>
+        /// <returns>list object</returns>
         public static List<Question> GetData()
         {
+            Console.WriteLine("How many questions you want to enter?");
+            int numOfQuestions = UiMethods.AskForIntInput();
+
+
             List<Question> quizDatabase = new List<Question>();
             int count = 0;
-            while (count < Program.MAX_QUESTIONS)
+            while (count < numOfQuestions)
             {
                 Question quiz = new Question();
 
@@ -29,6 +38,13 @@
             }
             return quizDatabase;
         }
+
+
+        /// <summary>
+        /// Game is played
+        /// </summary>
+        /// <param name="quiz"></param>
+        /// <returns></returns>
         public static int PlayGame(List<Question> quiz)
         {
 
@@ -37,7 +53,7 @@
 
             while (play)
             {
-                int randomNum = Program.rng.Next(Program.MAX_QUESTIONS);
+                int randomNum = Program.rng.Next(quiz.Count + 1);
 
                 UiMethods.ClearDisplay();
 
